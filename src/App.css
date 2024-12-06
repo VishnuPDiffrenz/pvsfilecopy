@@ -1,0 +1,102 @@
+/* .bgGradient{
+  background: linear-gradient(to bottom right,#007bff,#00c3ff);
+}
+
+.bggradient::after{
+  content: "hai";
+  color: blue;
+} */
+
+/* Base container styles */
+.gradient-container {
+  position: relative;
+  /* width: 600px; Set the desired width */
+  /* height: 600px; Set the desired height */
+  background: #fff; /* Background color for the div */
+  overflow: hidden; /* Ensures gradients don’t overflow outside the container */
+  /* margin: 50px auto; Center the div on the page */
+  z-index: 0;
+}
+
+/* Top-left gradient */
+.gradient-container::after {
+  content: '';
+  position: absolute;
+  top: -30px;
+  left: -30px;
+  width: calc(40vw); /* Size of the top-left gradient */
+  height: calc(60vh);
+  /* border-radius: 985px; */
+  opacity: 0.2;
+  background: linear-gradient(227deg, #1ED5E0 28.73%, #A81F2F 70.72%);
+  filter: blur(70px);
+  z-index: -1;
+}
+
+/* Bottom-right gradient */
+.gradient-container::before {
+  content: '';
+  position: absolute;
+  bottom: -50px;
+  right: -50px;
+  width: calc(32vw); /* Size of the bottom-right gradient */
+  height: calc(40vh);
+  /* border-radius: 689px; */
+  border-top-left-radius: 600px;
+  border-top-left-radius: 600px;
+  border-top-left-radius: 600px;
+  border-top-left-radius: 600px;
+  opacity: 0.26;
+  background: #35C0C8;
+  filter: blur(50px);
+  z-index: -1;
+} 
+
+/* style={{
+  backgroundImage: `url(${bgImage})`,
+  backgroundSize: "cover",
+  backgroundPosition: "center",
+}} */
+
+/* #root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+} */
